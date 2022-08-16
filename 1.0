@@ -1,0 +1,103 @@
+def linha():
+    print('-'*40)
+
+linha()
+from datetime import datetime
+today=datetime.today()
+print(today)
+
+linha()
+
+if __name__=='__main__':
+ print('''SISTEMA INTEGRADO DE GESTÃO''')
+linha()
+    
+def cabecalho(nome,rua,num,bairro,cidade):
+ nome=input('Nome: ')
+ rua=input('Rua: ')
+ num=input('N°: ')
+ bairro=input('Bairro: ')
+ cidade=input('Cidade: ')
+cabecalho('nn','gg','44','bb','bh')
+
+linha()
+
+def dados_do_veículo(montadora,modelo,cor,ano,placa):
+   montadora=input('Montadora: ')
+   modelo=input('Modelo: ')
+   cor=input('Cor: ')
+   ano=input('Ano: ')
+   placa=input('Placa:')
+   print('-'*40)
+dados_do_veículo('a','a','a',1995,'klj5263')
+linha()
+avarias=input('Digite as avarias do veiculo: ') #digitar as avarias que o veículo ja possui e não poderão ser corrigidos
+linha()
+def menu():
+ print('|Cód|Descrição')
+ print('|1|Lavagem técnica')
+ print('|2|Lavagem/Polimento/vitrificação')
+ print('|3|Polimento e cera')
+ print('|4|vitrificação de rodas')
+ print('|5|Lavagem motor')
+ print('|6|limpeza e vitrificação couro')
+
+menu()
+linha()
+total = 0.0
+
+codigo = int(input('Entre com o código desejado: '))
+while True:
+        if codigo == 1:
+            print('Lavagem técnica. R$ 90,00')
+            total += 90.00
+        elif codigo == 2:
+            print('Lavagem e polimento técnico com vitrificador R$ 498,00')
+            total += 498.00
+        elif codigo == 3:
+            print('Polimento e cera R$ 128,00')
+            total += 128.00
+        elif codigo == 4:
+            print('Vitrificação de rodas R$ 400,00')
+            total += 400.00
+        elif codigo == 5:
+            print('lavagem de motor R$ 88,00')
+            total += 88.00
+        elif codigo == 6:
+            print('Limpeza e vitrificação  de couro R$ 90,00')
+            total += 90.00
+        elif codigo == 7:
+            print('Lavagem e polimento moto R$ 280,00')
+            total += 280.00
+        elif codigo == 8:
+            print('restauração de bancos couro R$ 1200,00')
+            total += 1200.00
+        else:
+            print('Opção inválida')
+            codigo = int(input('Entre com o código desejado: '))
+            continue
+
+        print('Deseja pedir mais alguma coisa?')
+        print('1 - Sim')
+        print('2 - Não')
+        pedir_mais = int(input())
+
+        if pedir_mais == 2:
+            break
+
+        codigo = int(input('Entre com o código desejado: '))
+print(f'O total a ser pago é: {total:.2f} R$')
+linha()
+def pagamento():
+   print('-'*40)
+   print('Valor a vista: ',total)
+   print('Valor cartão de credito:')
+   print('A vista: ', total)
+   print('2x: ' , total/2)
+   print('3x: ', total/3)
+   print('4x: ', total/4)
+
+linha()
+pagamento()
+linha()
+relatorio_final=('Relatorio de Entrega:')
